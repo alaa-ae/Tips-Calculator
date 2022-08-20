@@ -52,7 +52,7 @@ numOfPeople.addEventListener('input', cal);
 //reset btn
 function reset1() {
         bill_Value.value = tip_btn.value = numOfPeople.value = '';
-        tip_amount.textContent = total.textContent = '$0';
+        tip_amount.textContent = total.textContent = '$0.00';
         tipPercent = 0;
 
         reset_btn.setAttribute('disabled', true);
