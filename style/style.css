@@ -1,4 +1,4 @@
-/* @import url("https://fonts.google.com/specimen/Space+Mono"); */
+@import url("https://fonts.google.com/specimen/Space+Mono");
 
 * {
         margin: 0;
@@ -42,7 +42,7 @@ input {
         text-align: right;
         font-size: 22px;
         font-weight: 700;
-        background-color: hsl(180, 81%, 94%);
+        background-color:  hsl(189, 41%, 97%);
 }
 
 input:focus {
@@ -63,7 +63,7 @@ label {
 }
 
 .bill_input {
-        background-image: url('./images/icon-dollar.svg');
+        background-image: url('../images/icon-dollar.svg');
         background-repeat: no-repeat;
         background-position: 10px center;
         padding-left: 15px;
@@ -111,7 +111,7 @@ label {
 }
 
 .num_of_people {
-        background-image: url('./images/icon-person.svg');
+        background-image: url('../images/icon-person.svg');
         background-repeat: no-repeat;
         background-position: 10px center;
         padding-left: 15px;
@@ -208,11 +208,17 @@ label {
 }
 
 @media (min-width:960px) {
+        body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                height: 100vh;
+        }
         #body_wrapper {
                 display: flex;
                 flex-direction: row;
-                align-items: center;
-                justify-content: center;
                 margin: auto;
                 width: 950px;
                 border-radius: 20px;
