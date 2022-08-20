@@ -1,0 +1,268 @@
+@import url("https://fonts.google.com/specimen/Josefin+Sans");
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        font-family: 'Josefin Sans', sans-serif;
+        ;
+        font-weight: 400;
+        font-size: 18px;
+        background-color: hsl(0, 2%, 84%);
+}
+
+#container {
+        background-image: url(./images/bg-mobile-light.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+}
+
+.darkmode_theme {
+        background-image: url(./images/icon-moon.svg);
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+}
+
+.second_body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 85%;
+        max-width: 500px;
+        height: 100%;
+}
+
+.header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+}
+
+.header_title {
+        color: hsl(0, 0%, 98%);
+        letter-spacing: 10px;
+        font-size: 2.4rem;
+        font-weight: 600;
+}
+
+.todo_list {
+        width: 100%;
+}
+
+.todo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 10px;
+        background-color: #ffffff;
+        height: 60px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 600px;
+}
+
+.todo_input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        padding: 10px;
+        border: none;
+        font-size: 1rem;
+        font-weight: 200;
+        background-color: transparent;
+}
+
+.radio_btn {
+        width: 20px;
+        height: 16px;
+        text-align: center;
+        justify-content: center;
+}
+
+.addBtn {
+        padding: 10px;
+        width: 25%;
+        background: transparent;
+        color: #555;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 0;
+
+}
+
+.addBtn:hover {
+        opacity: 0.7;
+}
+
+.added_todo {
+        width: 85%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+}
+
+#todo_ul {
+        list-style: none;
+        width: 100%;
+
+}
+
+.todo_li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 600px;
+        height: 60px;
+        background-color: #ffffff;
+        color: hsl(235, 19%, 35%);
+        font-size: 1rem;
+        padding: 10px;
+        border-bottom: 1px solid grey;
+}
+
+.todo_li:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+}
+
+.todo_li .radio_btn {
+        margin-right: 10px;
+}
+
+.left_li {
+        display: flex;
+}
+
+.close {
+        /* width: 22px; */
+        cursor: pointer;
+}
+
+.close:hover {
+        opacity: 0.6;
+}
+
+.stats_div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 600px;
+        height: 60px;
+        background-color: #ffffff;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+}
+
+.completed {
+        font-size: .9rem;
+        color: hsl(0, 0%, 60%);
+        padding: 10px;
+}
+
+.completed:nth-child(2) {
+        font-weight: 600;
+}
+
+.todo_links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.todo_links a {
+        text-decoration: none;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+        color: hsl(0, 1%, 70%);
+        padding: 10px;
+}
+
+.todo_links a:focus {
+        color: blue;
+}
+
+.todo_links a:hover {
+        opacity: 0.7;
+}
+
+button {
+        background-color: transparent;
+        border: none;
+
+}
+
+button :hover {
+        opacity: 0.6;
+        cursor: pointer;
+}
+
+
+
+@media (min-width:762px) {
+        #container {
+                background-image: url(./images/bg-desktop-light.jpg);
+        }
+
+        .dark #container {
+                background-image: url(./images/bg-desktop-dark.jpg);
+        }
+}
+
+.checkbtn {
+        display: block;
+        cursor: pointer;
+        border: 1px solid grey;
+        width: 18px;
+        height: 18px;
+        border-radius: 20px;
+        margin-right: 10px;
+        text-decoration: line-through;
+}
+
+.checkbtn:hover {
+        border-color: hsl(192, 100%, 67%);
+}
+
+.checkbtn img {
+        display: none;
+}
+
+.c:checked~.checkbtn {
+        background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.c:checked~.checkbtn img {
+        display: block;
+        position: relative;
+        top: 4px;
+        left: 3px;
+
+}
+
+.c:checked~p {
+        color: hsl(236, 9%, 61%);
+        text-decoration: line-through;
+}
+
+.c {
+        display: none;
+}

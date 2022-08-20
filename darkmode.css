@@ -1,0 +1,44 @@
+
+         .dark {
+                background-color: hsl(237, 14%, 26%);
+                
+        }
+        .dark #container{
+                background-image:url(./images/bg-mobile-dark.jpg);
+                
+                
+        }
+        .dark .darkmode_theme{
+                background-image: url(./images/icon-sun.svg);
+        }
+        .dark .todo{
+                background-color:  hsl(233, 14%, 35%);
+                color: hsl(231, 23%, 94%);
+        }
+        .dark .todo_li{
+                background-color:  hsl(233, 14%, 35%);
+                color: hsl(231, 23%, 94%);
+        }
+        .dark input{
+                background-color:  hsl(233, 14%, 35%);
+                color: hsl(231, 23%, 94%);
+        }
+        .dark .addBtn{
+                color: white;
+                background-color: hsl(233, 14%, 35%);
+        }
+        .dark .addBtn:hover{
+                color: hsl(231, 77%, 66%);
+                background-color: transparent;
+        }
+        .dark .stats_div{
+                background-color:  hsl(233, 14%, 35%);
+                color: hsl(231, 77%, 66%);
+        }
+        .dark .todo_links a{
+                color: hsl(231, 23%, 94%);
+        }
+        .dark .todo_links a:focus{
+                color: rgb(0, 190, 253);
+        }
+
