@@ -3,116 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./darkmode.css" />
-    <title>Frontend Mentor | Todo app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./style/style.css" />
 
     <style>
       .attribution {
+        margin: 10px;
         font-size: 11px;
         text-align: center;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
-        
       }
     </style>
   </head>
   <body>
     <main>
-      <section id="container">
-        <div class="second_body">
-          <div class="header">
-            <h1 class="header_title">TODO</h1>
-            <a href="#" onclick="myFunction()">
-              <div class="darkmode_theme"></div>
-            </a>
-          </div>
+      <div class="logo_div">
+        <img src="./images/logo.svg" alt="logo" class="logo" />
+      </div>
+      <section id="body_wrapper">
+        <form action="">
+          <div class="body_container">
+            <div class="all">
+              <div class="form_grp">
+                <label for="bill">Bill</label>
+                <input
+                  type="text"
+                  id="bill"
+                  class="bill_input"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
 
-          <div class="todo_list">
-            <div class="add_todo">
-              <div id="myDIV" class="add_todo">
-                <div class="todo">
-                  <div class="checkbtn" style="width:24px;height:18px"></div>
+              <div class="form_grp">
+                <label for="tip-percent">Select Tip %</label>
+                <div class="tip-grid">
+                  <button class="tip-btn" id="five-percent" type="button">
+                    5%
+                  </button>
+                  <button type="button" class="tip-btn" id="ten-percent">
+                    10%
+                  </button>
+                  <button type="button" class="tip-btn" id="fifteen-percent">
+                    15%
+                  </button>
+                  <button type="button" class="tip-btn" id="twentyfive-percent">
+                    25%
+                  </button>
+                  <button type="button" class="tip-btn" id="fifty-percent">
+                    50%
+                  </button>
                   <input
                     type="text"
-                    id="myInput"
-                    class="todo_input"
-                    placeholder="Create a new Todo..."
+                    name="custom1"
+                    class="custom_field"
+                    id="custom"
+                    placeholder="Custom"
+                    value=""
                   />
-                  <span onclick="newElement()" class="addBtn">Add</span>
                 </div>
+              </div>
+
+              <div class="form_grp">
+                <label for="number">Number of People</label>
+
+                <input
+                  type="text"
+                  class="num_of_people"
+                  id="number"
+                  placeholder="0"
+                  value=""
+                />
+                <p id="error_msg">Can't be zero</p>
+              </div>
+            </div>
+            <div class="calculations">
+              <div class="c">
+                <div class="tip_amount">
+                  <div class="title">
+                    <p>Tip Amount <span> / person</span></p>
+                  </div>
+                  <div class="amount">
+                    <h1 id="tipAmount">$0</h1>
+                  </div>
+                </div>
+                <div class="tip_amount">
+                  <div class="title">
+                    <p>Total <span> / person</span></p>
+                  </div>
+                  <div class="amount">
+                    <h1 id="total">$0</h1>
+                  </div>
+                </div>
+                <input type="reset" class="reset" id="reset_btn" disabled />
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </section>
-      <div class="added_todo">
-        <ul id="todo_ul">
-          <li class="todo_li">
-            <div class="left_li">
-              <input type="checkbox" name="" id="check1" class="c" />
-              <label for="check1" class="checkbtn">
-                <img src="./images/icon-check.svg" alt="" class="checkImg" />
-              </label>
-              <p>Hit the gym</p>
-            </div>
-          </li>
-          <li class="todo_li">
-            <div class="left_li">
-              <input type="checkbox" name="" id="check2" class="c" />
-              <label for="check2" class="checkbtn">
-                <img src="./images/icon-check.svg" alt="" class="checkImg" />
-              </label>
-              <p id="as">Pay bills</p>
-            </div>
-          </li>
-          <li class="todo_li">
-            <div class="left_li">
-              <input type="checkbox" name="" id="check3" class="c" />
-              <label for="check3" class="checkbtn">
-                <img src="./images/icon-check.svg" alt="" class="checkImg" />
-              </label>
-              <p>Meet George</p>
-            </div>
-          </li>
-          <li class="todo_li">
-            <div class="left_li">
-              <input type="checkbox" name="" id="check4" class="c" />
-              <label for="check4" class="checkbtn">
-                <img src="./images/icon-check.svg" alt="" class="checkImg" />
-              </label>
-              <p>Buy eggs</p>
-            </div>
-          </li>
-        </ul>
-        <div class="stats_div" id="stats">
-          <p class="completed" id="items_left"></p>
-          <button id="clearBtn"><p class="completed">Clear Completed</p></button>
-        </div>
-        <br />
-        <div class="todo todo_links" id="links">
-          <a href="#" id="all">All</a>
-          <a href="#" id="active">Active</a>
-          <a href="#" id="completed">Completed</a>
-        </div>
-      </div>
-
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Alaa</a>.
-      </div>
     </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/alaa1945">AlaaEzzddine</a>.
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
